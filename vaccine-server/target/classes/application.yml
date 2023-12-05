@@ -1,0 +1,46 @@
+server:
+  port: 8060
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: ${vaccine.datasource.driver-class-name}
+      url: jdbc:mysql://${vaccine.datasource.host}:${vaccine.datasource.port}/${vaccine.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${vaccine.datasource.username}
+      password: ${vaccine.datasource.password}
+  profiles:
+    active: dev
+  main:
+    allow-circular-references: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+logging:
+  level:
+    com:
+      vaccine:
+        mapper: debug
+        service: info
+        controller: info
+
+vaccine:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    admin-secret-key: itcast
+    # 设置jwt过期时间
+    admin-ttl: 7200000
+    # 设置前端传递过来的令牌名称
+    admin-token-name: token
+    user-secret-key:  vaccine
+    user-ttl: 7200000
+    user-token-name: authentication

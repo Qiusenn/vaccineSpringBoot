@@ -1,0 +1,44 @@
+{
+  "groups": [
+    {
+      "name": "vaccine.jwt",
+      "type": "com.vaccine.properties.JwtProperties",
+      "sourceType": "com.vaccine.properties.JwtProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "vaccine.jwt.admin-secret-key",
+      "type": "java.lang.String",
+      "description": "管理端员工生成jwt令牌相关配置",
+      "sourceType": "com.vaccine.properties.JwtProperties"
+    },
+    {
+      "name": "vaccine.jwt.admin-token-name",
+      "type": "java.lang.String",
+      "sourceType": "com.vaccine.properties.JwtProperties"
+    },
+    {
+      "name": "vaccine.jwt.admin-ttl",
+      "type": "java.lang.Long",
+      "sourceType": "com.vaccine.properties.JwtProperties"
+    },
+    {
+      "name": "vaccine.jwt.user-secret-key",
+      "type": "java.lang.String",
+      "description": "用户端微信用户生成jwt令牌相关配置",
+      "sourceType": "com.vaccine.properties.JwtProperties"
+    },
+    {
+      "name": "vaccine.jwt.user-token-name",
+      "type": "java.lang.String",
+      "sourceType": "com.vaccine.properties.JwtProperties"
+    },
+    {
+      "name": "vaccine.jwt.user-ttl",
+      "type": "java.lang.Long",
+      "sourceType": "com.vaccine.properties.JwtProperties"
+    }
+  ],
+  "hints": []
+}
