@@ -22,6 +22,8 @@
 
     <properties>
         <mybatis-plus.spring>3.4.3</mybatis-plus.spring>
+        <mybatis-plus-generate.version>3.5.3.1</mybatis-plus-generate.version>
+        <freemarker.version>2.3.31</freemarker.version>
         <mybatis.spring>2.2.0</mybatis.spring>
         <lombok>1.18.20</lombok>
         <druid>1.2.1</druid>
@@ -43,6 +45,18 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.spring}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus-generate.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
             </dependency>
 
             <dependency>
